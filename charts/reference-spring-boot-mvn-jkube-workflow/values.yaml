@@ -1,13 +1,11 @@
 global:
-  nameOverride: ref-spring-boot-jkube-min
+  nameOverride: ref-spring-boot-jkube-workflow-min
 
-  applicationName: ref-spring-boot-jkube-min
+  applicationName: ref-spring-boot-jkube-tekton-min
   serviceName: hello
 
   eventListenerIngressHost: el-reference-spring-boot-mvn-jkube-min-hello.apps.tssc.rht-set.com
   eventListenerRouteHostOverride: el-reference-spring-boot-mvn-jkube-hello.apps.tssc.rht-set.com
-
-  cleanupPipelineRunsToKeep: 4
 
   stepRunnerConfigDir: cicd/ploigos-integration-environment/tekton/minimal/ploigos-step-runner-config/
 

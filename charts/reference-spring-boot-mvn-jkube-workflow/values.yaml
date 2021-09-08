@@ -1,11 +1,11 @@
 global:
-  nameOverride: ref-spring-boot-jkube-workflow-min
+  nameOverride: ref-sb-jkube-workflow-min
 
-  applicationName: ref-spring-boot-jkube-tekton-min
+  applicationName: ref-sb-jkube-tekton-min
   serviceName: hello
 
-  eventListenerIngressHost: el-reference-spring-boot-mvn-jkube-min-hello.apps.tssc.rht-set.com
-  eventListenerRouteHostOverride: el-reference-spring-boot-mvn-jkube-hello.apps.tssc.rht-set.com
+  eventListenerIngressHost: el-reference-spring-boot-mvn-jkube-hello-min.apps.tssc.rht-set.com
+  eventListenerRouteHostOverride: el-reference-spring-boot-mvn-jkube-hello-min.apps.tssc.rht-set.com
 
   stepRunnerConfigDir: cicd/ploigos-integration-environment/tekton/minimal/ploigos-step-runner-config/
 
@@ -22,11 +22,8 @@ global:
   workflowWorkerHomeDirPVCRequestSize: 20Gi
   workflowWorkerAppDirPVCRequestSize: 1Gi
 
-  workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.20.0'
-  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.20.0'
-  workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.20.0'
-  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-jkube:v0.20.0'
-  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.20.0'
-
-  stepRunnerUpdateLibrary: true
-  stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/jkube'
+  workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.21'
+  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.21'
+  workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.21'
+  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-jkube:v0.21'
+  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.21'
